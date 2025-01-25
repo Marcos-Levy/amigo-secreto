@@ -1,4 +1,5 @@
 const lista = document.getElementById("listaAmigos")
+const resultado = document.getElementById("resultado")
 let array = []
 
 function adicionarAmigo() {
@@ -8,6 +9,7 @@ function adicionarAmigo() {
     } else {
         array.push(inputName)
         document.getElementById("amigo").value = ""
+        resultado.innerHTML = ""
         lista.innerHTML = ""
         array.forEach(listAmigos => {
             lista.innerHTML += 
@@ -23,3 +25,17 @@ function adicionarAmigo() {
 
     }
 }
+
+function sortearAmigo(){
+    if(array.length > 0){
+        lista.innerHTML = ""
+        resultado.innerHTML = ""
+        let index = parseInt(Math.random() * (array.length - 0) + 0)
+        resultado.innerHTML = `Amigo secreto sorteado é : ${array[index]}`
+        console.log(array);
+        console.log(index); 
+    }
+        
+        
+        
+} 
