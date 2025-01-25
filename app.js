@@ -32,8 +32,7 @@ function sortearAmigo(){
         resultado.innerHTML = ""
         let index = parseInt(Math.random() * (array.length - 0) + 0)
         resultado.innerHTML = `Amigo secreto sorteado é : ${array[index]}`
-        console.log(array);
-        console.log(index); 
+        
     }
         
         
